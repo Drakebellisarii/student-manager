@@ -1,6 +1,8 @@
 package com.example.Rosterapplication.controller;
 
 import java.util.List;
+import java.util.Map;
+import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -120,4 +122,29 @@ public class Controller {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+
+    @GetMapping("/config")
+    public Map<String, String> getConfig() {
+        Map<String, String> envVariables = System.getenv();
+        for (Map.Entry<String, String> entry : envVariables.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+        return envVariables;
+    }
+
+    @GetMapping("/fib")
+    public List<Integer> generateFibonacci(@RequestParam("length") int length) {
+        List<Integer> fibonacciSequence = new ArrayList<>();
+        int a = 0, b = 1;
+        for (int i = 0; i < length; i++) {
+            fibonacciSequence.add(a);
+            int temp = a;
+            a = b;
+            b = temp + b;
+        }
+        return fibonacciSequence;
+    }
+
+
+
 }
