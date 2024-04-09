@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp-deployment
+  name: myapp-deployment2
 spec:
   replicas: 3
   selector:
@@ -14,13 +14,13 @@ spec:
     spec:
       containers:
         - name: myapp-container
-          image: drakebellisari/rosterapplication:v0.0.1
+          image: drakebellisari/myapp2:v0.0.1
           ports:
             - containerPort: 8080
           volumeMounts:
             - name: config-volume
               mountPath: /etc/config
       volumes:
-          - name: config-volume
-            configMap:
-              name: my-configmap
+        - name: config-volume
+          configMap:
+            name: my-configmap

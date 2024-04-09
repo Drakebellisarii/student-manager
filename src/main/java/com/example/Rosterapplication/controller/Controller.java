@@ -3,20 +3,13 @@ package com.example.Rosterapplication.controller;
 import java.util.List;
 import java.util.Map;
 import java.util.ArrayList;
+import java.util.HashMap;
 
+import jdk.jfr.Frequency;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.example.Rosterapplication.model.Student;
 import com.example.Rosterapplication.service.Roster;
@@ -125,15 +118,17 @@ public class Controller {
 
     @GetMapping("/config")
     public Map<String, String> getConfig() {
+        Map<String, String> configMap = new HashMap<>();
         Map<String, String> envVariables = System.getenv();
         for (Map.Entry<String, String> entry : envVariables.entrySet()) {
+            configMap.put(entry.getKey(), entry.getValue());
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
-        return envVariables;
+        return configMap;
     }
 
-    @GetMapping("/fib")
-    public List<Integer> generateFibonacci(@RequestParam("length") int length) {
+    @RequestMapping(value ="/fib", method = RequestMethod.GET)
+    public String generateFibonacci(@RequestParam("length") int length) {
         List<Integer> fibonacciSequence = new ArrayList<>();
         int a = 0, b = 1;
         for (int i = 0; i < length; i++) {
@@ -142,7 +137,7 @@ public class Controller {
             a = b;
             b = temp + b;
         }
-        return fibonacciSequence;
+        return fibonacciSequence.toString();
     }
 
 

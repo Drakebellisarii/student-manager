@@ -4,4 +4,4 @@ metadata:
   name: my-configmap
   namespace: my-namespace
 data:
-  DATA_MICROSERVICE: MyOtherMicroservice
+  DATA_MICROSERVICE: "MyOtherMicroservice"
