@@ -15,10 +15,10 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build the container image
-        run: docker build . -t drake-restful-service
+        run: docker build . -t drakes-restful-service
 
       - name: Run the container
-        run: docker run -d -p 8080:8080 drake-restful-service
+        run: docker run -d -p 8080:8080 drakes-restful-service
 
       - name: Test the RESTful service
         run: |
