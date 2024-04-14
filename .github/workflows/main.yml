@@ -14,11 +14,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Build with Maven
+        run: mvn package
+
       - name: Build the container image
-        run: docker build . -t drakes-restful-service
+        run: docker build . -t drake-restful-service
 
       - name: Run the container
-        run: docker run -d -p 8080:8080 drakes-restful-service
+        run: docker run -d -p 8080:8080 drake-restful-service
 
       - name: Test the RESTful service
         run: |
