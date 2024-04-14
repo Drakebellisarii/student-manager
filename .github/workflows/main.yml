@@ -38,7 +38,7 @@ jobs:
           response=$(curl http://localhost:8080/api/fib?length=3)
           
           # Check that the response is "Hello world."
-          if [ "$response" == "0, 1, 1" ]; then
+          if [ "$response" == "[0, 1, 1]" ]; then
             echo "Test passed!"
           else
             echo "Test failed. Expected '0, 1, 1', got '$response'"
