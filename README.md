@@ -19,8 +19,6 @@ Before you begin, ensure you have the following installed:
 - [Git](https://git-scm.com/)
 
 ## Project Structure
-
-```plaintext
 .
 ├── src
 │   ├── main
