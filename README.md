@@ -41,25 +41,4 @@ Before you begin, ensure you have the following installed:
 ├── pom.xml
 └── README.md
 
-## Building and Running the Application
-###Cloning the Repository
- Clone the repository:
 
-bash
-Copy code
-git clone https://github.com/username/reponame.git
-cd reponame
-Building the Docker Image
-Build the Docker image:
-
-bash
-Copy code
-docker build -t student-roster-manager .
-Running the Docker Container
-Run the Docker container:
-
-bash
-Copy code
-docker run -p 8080:8080 student-roster-manager
-Accessing the Application
-The application will be running at http://localhost:8080. You can access the Swagger API documentation at http://localhost:8080/swagger-ui.html.
