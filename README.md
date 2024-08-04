@@ -20,15 +20,18 @@ Before you begin, ensure you have the following installed:
 
 ## Building and Running the Application
 ### Clone the repository 
-  1. Clone the repository: ```bash
+  1. Clone the repository:
+     ```bash
       git clone https://github.com/Drakebellisarii/student-manager.git
     ```
 ### Build the Docker Image
-  2. Build the Docker image: ```bash
+  2. Build the Docker image:
+   ```bash
       docker build -t student-roster-manager .
     ```
 ### Running the Docker Container
-  3. Run the docker container:  ```bash
+  3. Run the docker container:
+ ```bash
     docker run -p 8080:8080 student-roster-manager
     ```
 ### Accesing the application
