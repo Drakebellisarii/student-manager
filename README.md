@@ -29,8 +29,8 @@ Before you begin, ensure you have the following installed:
       docker build -t student-roster-manager .
 ### Running the Docker Container
   3. Run the docker container:
-    ```bash
-     docker run -p 8080:8080 student-roster-manager
+     ```bash
+       docker run -p 8080:8080 student-roster-manager
 ### Accesing the application
   4. The application will be running at http://localhost:8080. You can access the Swagger API documentation at http://localhost:8080/swagger-ui.html.
 ## Project Structure
