@@ -1,6 +1,6 @@
 # Student Roster Manager Microservice
 
-This project is a rudimentary RESTful microservice for managing a student roster. The application is built using Java with the Spring Boot framework, and it is packaged in a Docker container. The service allows users to interact with student data (Name, Age, Student ID, Major) through four REST commands: GET, POST, PUT, and DELETE. Swagger is enabled for API documentation.
+The Student Roster Manager provides an interface to manage student data efficiently. Users can create, read, update, and delete(CRUD) student records through a set of RESTful endpoints. Swagger UI offers interactive API documentation for ease of use. This project was built using Java with the Spring Boot framework and packaged in a Docker container to enable seamless deployment and operation across any system, eliminating the need for a lengthy list of prerequisites.
 
 ## Learning Journey and Decisions
 
