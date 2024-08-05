@@ -32,7 +32,7 @@ Before you begin, ensure you have the following installed:
      ```bash
        docker run -p 8080:8080 student-roster-manager
 ### Accesing the application
-  4. The application will be running at http://localhost:808You can access the Swagger API documentation at http://localhost:8080/swagger-ui.html.
+  4. You can now access the Swagger API documentation at http://localhost:8080/swagger-ui.html.
 ## Testing locally
 If you don't want to go through the process of running the spring application and port forwarding you can also test my application using my GUI I designed with java
 
