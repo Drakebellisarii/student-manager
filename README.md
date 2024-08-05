@@ -34,5 +34,12 @@ Before you begin, ensure you have the following installed:
 ### Accesing the application
   4. You can now access the Swagger API documentation at http://localhost:8080/swagger-ui.html.
 ## Testing locally
-If you don't want to go through the process of running the spring application and port forwarding you can also test my application using my GUI I designed with java
+If you don't want to go through the process of running the spring application through docker and waiting on the image to build and run. You can get a pretty basic understanding of the application through the GUI I created with Java's JFrame class.
 
+### Things to consider
+  1. You will need to have DockerDesktop running and be signed in for the build to go smootly
+  2. The Build can take a couple of minutes so be patient
+  3. You will want to make sure you have no other servers running on port 8080 or else this obviouslly will not work
+  4. Feel free to email me any suggestions or your feedback:
+      ```bash
+        drakebellisari@icloud.com
