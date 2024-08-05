@@ -106,7 +106,6 @@ public class Roster {
             return student;
         }
 
-        // create new Tutorial
         student.setId(++id);
         entries.add(student);
         return student;

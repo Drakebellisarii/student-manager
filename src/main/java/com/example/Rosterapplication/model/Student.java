@@ -30,4 +30,14 @@ public class Student {
     public String getMajor() {return major;}
     public void setMajor(String newMajor){this.major=newMajor;}
 
+    @Override
+    public String toString() {
+        return
+                "Name: " + name +
+                        ", ID: " + id +
+                ", Age: " + age +
+                ", Grad Year: " + gradYear +
+                ", Major: " + major;
+    }
+
 }
